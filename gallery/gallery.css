@@ -1,0 +1,16 @@
+.gallery {
+    columns: 220px;
+    column-gap: 12px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    break-inside: avoid;
+}

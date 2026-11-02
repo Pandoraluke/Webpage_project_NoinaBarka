@@ -1,0 +1,10 @@
+.map-heading {
+    margin-top: 50px;
+}
+
+.map-frame {
+    width: 600px;
+    height: 450px;
+    max-width: 100%;
+    border: 0;
+}
