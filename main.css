@@ -8,7 +8,49 @@ body {
 }
 
 .trip-links {
-    display: flex;
-    gap: 40px;
-    margin: 50px 20px 50px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+    justify-content: center;
+    gap: 24px;
+    margin: 50px 20px;
+}
+
+.trip-card {
+    overflow: hidden;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.trip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgb(0 0 0 / 16%);
+}
+
+.trip-card:focus-visible {
+    outline: 3px solid #1769aa;
+    outline-offset: 3px;
+}
+
+.trip-card-image {
+    display: grid;
+    width: 100%;
+    height: 180px;
+    place-items: center;
+    background: #e8eef0;
+    object-fit: cover;
+}
+
+.trip-card-image::after {
+    color: #53636b;
+    content: "Photo coming soon";
+}
+
+.trip-card h3 {
+    margin: 16px 12px;
 }
