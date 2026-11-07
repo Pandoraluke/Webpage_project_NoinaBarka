@@ -38,17 +38,23 @@ body {
 }
 
 .trip-card-image {
-    display: grid;
+    display: block;
     width: 100%;
     height: 180px;
-    place-items: center;
     background: #e8eef0;
     object-fit: cover;
+    object-position: center;
 }
 
-.trip-card-image::after {
-    color: #53636b;
-    content: "Photo coming soon";
+.trip-card-image-frame {
+    display: block;
+    overflow: hidden;
+}
+
+.trip-card:first-child .trip-card-image {
+    object-position: center top;
+    transform: scale(2.5);
+    transform-origin: center 44%;
 }
 
 .trip-card h3 {
