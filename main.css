@@ -2,6 +2,27 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.site-title { text-align: center; }
+
+.top-nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* left spacer | centered links | right links */
+    align-items: center;
+}
+
+.nav-about {
+    grid-column: 1;
+    justify-self: start;
+}
+
+.nav-main {
+    grid-column: 2;          /* middle column */
+}
+
+.nav-account {
+    grid-column: 3;          /* right column */
+    justify-self: end;       /* push to the far right edge */
+}
 .trip-heading {
     margin-top: 50px;
     text-align: center;
