@@ -1,10 +1,16 @@
+/* =========================================================
+   contact.css - styles for the Contact page
+   ========================================================= */
+
+/* "Where to find us:" heading */
 .map-heading {
-    margin-top: 50px;
+    margin-top: 50px; /* space between the contact info and the map */
 }
 
+/* Google Maps box */
 .map-frame {
     width: 600px;
     height: 450px;
-    max-width: 100%;
-    border: 0;
+    max-width: 100%;  /* on screens narrower than 600px, shrink to fit instead of overflowing */
+    border: 0;        /* remove the default border around the iframe */
 }

@@ -1,26 +1,34 @@
+/* =========================================================
+   account.css - styles for the Sign In and Register pages
+   ========================================================= */
+
+/* Whole page: grey background with the form box in the exact middle */
 body {
-    background-color: #f0f0f0;
-    min-height: 100vh;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #f0f0f0; /* light grey background */
+    min-height: 100vh;         /* page is at least as tall as the screen (vh = % of screen height) */
+    margin: 0;                 /* remove the browser's default space around the page */
+    display: flex;             /* flexbox lets us center things easily */
+    align-items: center;       /* center vertically */
+    justify-content: center;   /* center horizontally */
 }
 
+/* The white box that holds the form */
 main {
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;                            /* space between the box edge and its content */
+    border-radius: 10px;                      /* rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* soft shadow all around the box */
     text-align: center;
 }
 
+/* Page heading ("Sign In" / "Register") */
 h1 {
-    margin: 0 0 24px;
+    margin: 0 0 24px; /* no space above, 24px below (order: top, left+right, bottom) */
 }
 
-input[type="submit"] {
-    padding: 10px 24px;
+/* Submit button: bigger and bold */
+input[type="submit"] {      /* selects only <input> elements whose type is "submit" */
+    padding: 10px 24px;     /* 10px top and bottom, 24px left and right */
     font-size: 16px;
     font-weight: bold;
 }

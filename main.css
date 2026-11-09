@@ -1,83 +1,109 @@
+/* =========================================================
+   main.css - shared styles, loaded by EVERY page of the site
+   ========================================================= */
+
+/* ---------- Whole page ---------- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* use Arial; if it's missing, use any font without "feet" (sans-serif) */
 }
 
-.site-title { text-align: center; }
+/* Big site title at the top of the page (class="site-title") */
+.site-title { text-align: center; } /* center the text horizontally */
 
+/* ---------- Top navigation bar (<nav class="top-nav">) ----------
+   The bar is split into 3 columns:
+   [ About ]      [ Home | Contact | Gallery ]      [ Sign In | Register ]
+     left                   middle                          right          */
 .top-nav {
-    display: grid;
+    display: grid;                        /* turn the nav into a grid so we can place things in columns */
     grid-template-columns: 1fr auto 1fr; /* left spacer | centered links | right links */
-    align-items: center;
+    align-items: center;                  /* line everything up vertically in the middle */
 }
 
+/* "About" link - left column */
 .nav-about {
-    grid-column: 1;
-    justify-self: start;
+    grid-column: 1;          /* left column */
+    justify-self: start;     /* stick to the left edge of that column */
 }
 
+/* Home | Contact | Gallery - middle column */
 .nav-main {
     grid-column: 2;          /* middle column */
 }
 
+/* Sign In | Register - right column */
 .nav-account {
     grid-column: 3;          /* right column */
     justify-self: end;       /* push to the far right edge */
 }
+
+/* ---------- Home page: "Choose a trip" section ---------- */
+
+/* Heading above the trip cards */
 .trip-heading {
-    margin-top: 50px;
+    margin-top: 50px;        /* empty space above the heading */
     text-align: center;
 }
 
+/* Box that holds the 3 trip cards */
 .trip-links {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
-    justify-content: center;
-    gap: 24px;
-    margin: 50px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px)); /* fit as many cards per row as possible, each 220-280px wide;
+                                                                     on a small screen they wrap onto new rows */
+    justify-content: center; /* center the row of cards */
+    gap: 24px;               /* space between the cards */
+    margin: 50px 20px;       /* 50px above and below, 20px left and right */
 }
 
+/* One trip card (the whole card is a link) */
 .trip-card {
-    overflow: hidden;
-    color: inherit;
+    overflow: hidden;        /* hide anything that sticks out of the card (keeps the image inside the rounded corners) */
+    color: inherit;          /* use the normal text color instead of the blue link color */
     text-align: center;
-    text-decoration: none;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
-    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;   /* remove the link underline */
+    border: 1px solid #ccc;  /* thin light-grey border */
+    border-radius: 8px;      /* rounded corners */
+    background: #fff;        /* white background */
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);     /* soft shadow: x offset, y offset, blur, color (black at 10%) */
+    transition: transform 0.2s, box-shadow 0.2s; /* animate movement and shadow over 0.2 seconds */
 }
 
+/* When the mouse is over a card */
 .trip-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgb(0 0 0 / 16%);
+    transform: translateY(-4px);                 /* lift the card 4px up */
+    box-shadow: 0 6px 16px rgb(0 0 0 / 16%);     /* bigger, darker shadow so it looks raised */
 }
 
+/* When the card is selected with the keyboard (Tab key) */
 .trip-card:focus-visible {
-    outline: 3px solid #1769aa;
-    outline-offset: 3px;
+    outline: 3px solid #1769aa;  /* blue outline so keyboard users can see where they are */
+    outline-offset: 3px;         /* leave a small gap between the card and the outline */
 }
 
+/* Picture on top of each card */
 .trip-card-image {
-    display: block;
-    width: 100%;
-    height: 180px;
-    background: #e8eef0;
-    object-fit: cover;
-    object-position: center;
+    display: block;              /* removes the small gap that appears under images by default */
+    width: 100%;                 /* as wide as the card */
+    height: 180px;               /* every picture is the same height */
+    background: #e8eef0;         /* light grey shown while the picture loads */
+    object-fit: cover;           /* fill the box without stretching; crop the extra parts */
+    object-position: center;     /* when cropping, keep the middle of the picture */
 }
 
+/* Frame around the first card's picture (needed because that picture is zoomed in) */
 .trip-card-image-frame {
     display: block;
-    overflow: hidden;
+    overflow: hidden;            /* cut off the zoomed part that would stick out */
 }
 
+/* Only the FIRST card's picture (the dolphin) - zoom in on the dolphin */
 .trip-card:first-child .trip-card-image {
-    object-position: center top;
-    transform: scale(2.5);
-    transform-origin: center 44%;
+    object-position: center top; /* keep the top part of the picture */
+    transform: scale(2.5);       /* zoom in 2.5 times */
+    transform-origin: center 44%; /* the point it zooms towards (middle, a bit above the center) */
 }
 
+/* Trip name under each picture */
 .trip-card h3 {
-    margin: 16px 12px;
+    margin: 16px 12px;           /* 16px above and below, 12px left and right */
 }
