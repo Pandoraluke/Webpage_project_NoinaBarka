@@ -1,8 +1,4 @@
-/* =========================================================
-   trip.css - styles for the trip pages (breakfast, sunset)
-   ========================================================= */
 
-/* ---------- Route section: map picture + "Our route" text side by side ---------- */
 .route-section {
     display: flex;            /* put the children (map and text) next to each other in a row */
     align-items: flex-start;  /* line them up at the top */
@@ -19,20 +15,17 @@
     border-radius: 20px;      /* rounded corners */
 }
 
-/* "Our route" text */
 .route-text {
     flex: 1;                  /* take up whatever space is left next to the map */
     max-width: 30%;           /* but no more than 30% */
 }
 
-/* ---------- Trip information table ---------- */
 table {
     width: 60%;                  /* table is 60% as wide as the page */
     margin: 20px auto 0;         /* 20px above, centered, nothing below */
     border-collapse: collapse;   /* merge neighboring cell borders into one line instead of double lines */
 }
 
-/* Every cell: header cells (th) and normal cells (td) */
 th,
 td {
     border: 1px solid #ccc;      /* thin light-grey border */
@@ -41,20 +34,18 @@ td {
     vertical-align: middle;      /* center vertically */
 }
 
-/* Bullet list inside the table ("INCLUDED" row) */
 table ul {
     list-style-position: inside; /* keep the bullet points inside the cell */
     padding: 0;                  /* remove the default left indent of lists */
     margin: 0;
 }
 
-/* The "INCLUDED" cell */
+
 .included-cell {
     text-align: center;
     vertical-align: middle;
 }
 
-/* ---------- Sunset page intro text ---------- */
 .sunset-intro {
     text-align: center;
     padding: 20px;            /* space inside the paragraph */

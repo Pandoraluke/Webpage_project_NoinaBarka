@@ -1,8 +1,4 @@
-/* =========================================================
-   main.css - shared styles, loaded by EVERY page of the site
-   ========================================================= */
 
-/* ---------- Whole page ---------- */
 body {
     font-family: Arial, sans-serif; /* use Arial; if it's missing, use any font without "feet" (sans-serif) */
 }
