@@ -8,8 +8,19 @@ body {
     min-height: 100vh;         /* page is at least as tall as the screen (vh = % of screen height) */
     margin: 0;                 /* remove the browser's default space around the page */
     display: flex;             /* flexbox lets us center things easily */
-    align-items: center;       /* center vertically */
-    justify-content: center;   /* center horizontally */
+    flex-direction: column;    /* stack children top-to-bottom (nav on top, form below) instead of side by side */
+    align-items: center;       /* center children horizontally */
+}
+
+/* Navigation bar: full width at the very top */
+.top-nav {
+    align-self: stretch;       /* ignore the centering above and span the whole width */
+    padding: 8px;              /* same spacing as the other pages (body margin is 0 here) */
+}
+
+/* Push the form box into the vertical middle of the remaining space */
+main {
+    margin: auto 0;
 }
 
 /* The white box that holds the form */
